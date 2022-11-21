@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkerboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+
+
+</head>
+<body>
+    <h1 class="hello" style="color: {{color}}; background-color: {{color2}}">*** Checkerboard ***</h1>
+    
+    {%for number2 in range(0,num2)%}
+        <div class="container">
+            {% for number in range(0,num)%}
+                {% if number2 is divisibleby 2%}
+                    {% if number is divisibleby 2%}
+                    <div class="azul" style="background-color: {{color2}}";></div>
+                    {% elif number is not divisibleby 2 %}
+                    <div class="azul" style="background-color: {{color}}";></div>
+                    {%endif%}
+                {% else%}
+                    {% if number is divisibleby 2%}
+                    <div class="azul" style="background-color: {{color}}";></div>
+                    {% elif number is not divisibleby 2 %}
+                    <div class="azul" style="background-color: {{color2}}";></div>
+                    {%endif%}
+                {%endif%}
+
+            {%endfor%}
+        </div>
+    {%endfor%}
+    
+</body>
+</html>

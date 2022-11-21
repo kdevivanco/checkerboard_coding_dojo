@@ -1,0 +1,23 @@
+.azul{
+    width: 60px;
+    height: 60px;
+    background-color: #9fc5f8;
+}
+
+.azul:even{
+    background-color: blue;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.hello{
+    text-align: center;
+    padding: 2rem;
+    width: 40%;
+    margin: 1rem auto;
+}
